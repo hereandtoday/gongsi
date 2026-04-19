@@ -1,60 +1,79 @@
-/* 1. 隐藏顶部控制栏，和 learnbuffett 一致 */
+/* 1:1 像素级复刻 learnbuffett.com —— 最微观对齐 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    --md-text-font: "Noto Sans SC";
+    --md-code-font: "JetBrains Mono";
+}
+
+/* 完全隐藏顶部栏 */
 .md-header {
     display: none !important;
 }
 
-/* 2. 左侧导航栏贴边 + 宽度对齐 */
+/* 左侧导航栏贴边 + 宽度完全一致 */
 .md-sidebar--primary {
     left: 0 !important;
-    width: 280px !important;
-    border-right: 1px solid rgba(255,255,255,0.1);
+    width: 260px !important;
+    border-right: 1px solid rgba(255,255,255,0.07) !important;
 }
 
-/* 3. 主内容区布局对齐 */
-.md-main {
-    margin-left: 280px !important;
-}
-.md-main__inner {
-    padding: 2rem 3rem !important;
-    max-width: 900px !important;
+/* 内容区宽度、居中、内边距 100% 一致 */
+.md-content {
+    max-width: 820px !important;
     margin: 0 auto !important;
+    padding: 28px 20px !important;
 }
 
-/* 4. 深色模式背景和配色 */
+/* 正文字体大小、行高、字间距 */
+.md-typeset p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+    letter-spacing: 0.01em !important;
+    color: #e2e8f0 !important;
+}
+
+/* 一级标题：大小、粗细、颜色、下边距 */
+.md-typeset h1 {
+    font-size: 32px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    margin-bottom: 24px !important;
+}
+
+/* 二级标题 */
+.md-typeset h2 {
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    margin-top: 32px !important;
+    margin-bottom: 16px !important;
+}
+
+/* 三级标题 */
+.md-typeset h3 {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+}
+
+/* 链接颜色、下划线行为 */
+.md-typeset a {
+    color: #14b8a6 !important;
+    text-decoration: none !important;
+}
+.md-typeset a:hover {
+    text-decoration: underline !important;
+}
+
+/* 深色模式背景色 100% 匹配 */
 [data-md-color-scheme="slate"] {
     --md-default-bg-color: #1e1e2e !important;
     --md-default-fg-color: #e2e8f0 !important;
-    --md-primary-fg-color: #14b8a6 !important;
+    --md-typeset-color: #e2e8f0 !important;
 }
 
-/* 5. 标题和正文字体样式复刻 */
-.md-typeset h1 {
-    font-size: 2rem !important;
-    font-weight: 400 !important;
-    color: #ffffff !important;
-    border-bottom: none !important;
-    margin-bottom: 1.5rem !important;
-}
-.md-typeset h2 {
-    font-size: 1.5rem !important;
-    font-weight: 400 !important;
-    color: #e2e8f0 !important;
-}
-.md-typeset p {
-    font-size: 1rem !important;
-    line-height: 1.7 !important;
-    color: #cbd5e1 !important;
-}
-
-/* 6. 导航栏顶部的网站名和搜索框样式 */
-.md-sidebar--primary .md-search {
-    margin-top: 1rem !important;
-    margin-bottom: 1.5rem !important;
-}
-.md-sidebar__header {
-    display: block !important;
-    padding: 1rem 1rem 0 !important;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
+/* 搜索框样式匹配 */
+.md-search__input {
+    background-color: rgba(255,255,255,0.06) !important;
 }
