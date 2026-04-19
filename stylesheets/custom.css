@@ -1,16 +1,45 @@
-/* 金融蓝导航栏 */
-.md-header {
-    background-color: #1976d2 !important;
+/* 让左侧导航贴边，和 learnbuffett 完全一样 */
+.md-sidebar--primary {
+    left: 0 !important;
+    width: 280px !important;
+}
+.md-main__inner {
+    padding-left: 280px !important;
+    max-width: 100% !important;
+}
+.md-content {
+    max-width: 900px !important;
+    margin: 0 auto !important;
 }
 
-/* 首页标题颜色 */
+/* 标题字体、大小、颜色完全复刻 */
 .md-typeset h1 {
-    color: #1976d2;
-    border-bottom: 2px solid #2196f3;
-    padding-bottom: 0.5rem;
+    font-size: 34px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    margin-bottom: 24px !important;
+}
+.md-typeset h2 {
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+}
+.md-typeset h3 {
+    font-size: 20px !important;
+    color: #ffffff !important;
 }
 
-/* 侧边栏高亮 */
-.md-nav__link--active {
-    color: #1976d2 !important;
+/* 正文字体、行高复刻 */
+.md-typeset p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    color: #e0e0e0 !important;
+}
+
+/* 左侧导航标题位置 */
+.md-header {
+    display: none !important;
+}
+.md-sidebar--primary .md-search {
+    margin-top: 16px !important;
 }
