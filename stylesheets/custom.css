@@ -1,79 +1,80 @@
-/* 1:1 像素级复刻 learnbuffett.com —— 最微观对齐 */
+/* 1:1 复刻 learnbuffett 暖米色背景 + 排版 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
     --md-text-font: "Noto Sans SC";
     --md-code-font: "JetBrains Mono";
+    /* 核心：匹配截图的暖米色背景 */
+    --md-default-bg-color: #f8f6f2 !important;
+    --md-default-fg-color: #2d3748 !important;
+    --md-typeset-color: #2d3748 !important;
 }
 
-/* 完全隐藏顶部栏 */
+/* 隐藏顶部栏（和learnbuffett一致） */
 .md-header {
     display: none !important;
 }
 
-/* 左侧导航栏贴边 + 宽度完全一致 */
+/* 左侧导航栏贴边 + 样式匹配 */
 .md-sidebar--primary {
     left: 0 !important;
     width: 260px !important;
-    border-right: 1px solid rgba(255,255,255,0.07) !important;
+    border-right: 1px solid rgba(0,0,0,0.05) !important;
+    /* 导航栏背景也匹配浅米色 */
+    background-color: #f5f3ef !important;
 }
 
-/* 内容区宽度、居中、内边距 100% 一致 */
+/* 正文区宽度、边距、背景完全匹配 */
 .md-content {
     max-width: 820px !important;
     margin: 0 auto !important;
     padding: 28px 20px !important;
+    /* 正文区纯暖米色背景 */
+    background-color: #f8f6f2 !important;
 }
 
-/* 正文字体大小、行高、字间距 */
+/* 正文字体样式（匹配截图的阅读感） */
 .md-typeset p {
     font-size: 16px !important;
     line-height: 1.75 !important;
     letter-spacing: 0.01em !important;
-    color: #e2e8f0 !important;
+    color: #2d3748 !important;
 }
 
-/* 一级标题：大小、粗细、颜色、下边距 */
+/* 标题样式（匹配截图的深色、柔和粗细） */
 .md-typeset h1 {
     font-size: 32px !important;
     font-weight: 500 !important;
-    color: #ffffff !important;
+    color: #1a202c !important;
     margin-bottom: 24px !important;
 }
 
-/* 二级标题 */
 .md-typeset h2 {
     font-size: 24px !important;
     font-weight: 500 !important;
-    color: #ffffff !important;
+    color: #1a202c !important;
     margin-top: 32px !important;
     margin-bottom: 16px !important;
 }
 
-/* 三级标题 */
 .md-typeset h3 {
     font-size: 20px !important;
     font-weight: 500 !important;
-    color: #ffffff !important;
+    color: #1a202c !important;
 }
 
-/* 链接颜色、下划线行为 */
+/* 链接颜色（匹配learnbuffett的低饱和棕褐色） */
 .md-typeset a {
-    color: #14b8a6 !important;
+    color: #8b5a2b !important;
     text-decoration: none !important;
 }
 .md-typeset a:hover {
     text-decoration: underline !important;
 }
 
-/* 深色模式背景色 100% 匹配 */
+/* 强制关闭深色模式，固定为截图的浅米色风格 */
 [data-md-color-scheme="slate"] {
-    --md-default-bg-color: #1e1e2e !important;
-    --md-default-fg-color: #e2e8f0 !important;
-    --md-typeset-color: #e2e8f0 !important;
-}
-
-/* 搜索框样式匹配 */
-.md-search__input {
-    background-color: rgba(255,255,255,0.06) !important;
+    --md-default-bg-color: #f8f6f2 !important;
+    --md-default-fg-color: #2d3748 !important;
+    --md-typeset-color: #2d3748 !important;
 }
