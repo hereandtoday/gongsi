@@ -1,0 +1,16 @@
+/* 金融蓝导航栏 */
+.md-header {
+    background-color: #1976d2 !important;
+}
+
+/* 首页标题颜色 */
+.md-typeset h1 {
+    color: #1976d2;
+    border-bottom: 2px solid #2196f3;
+    padding-bottom: 0.5rem;
+}
+
+/* 侧边栏高亮 */
+.md-nav__link--active {
+    color: #1976d2 !important;
+}
